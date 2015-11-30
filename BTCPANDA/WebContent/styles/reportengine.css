@@ -1,0 +1,128 @@
+#tittleDiv {
+    text-align: center;
+    padding-top: 10px;
+}
+.txtline {
+    background-color: transparent;
+    border-style: inset;
+    border-width: 0px 0px 2px 0px;
+    border-color: black;
+}
+#reportingUrlProtocol {
+    width: 2em;
+}
+#reportingUrlip {
+    width: 7em;
+}
+#editReportingUrlCreationTBId tr td {
+    padding: 10px;
+}
+#saveReportingUrlCreationTBId {
+    margin-top: 14px;
+}
+#input-template-div table td {
+    border: 1px solid black;
+    text-align: center;
+    width: 49em;
+    padding-bottom: 17px;
+}
+#html-code-div {
+    padding: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#html-out-div {
+    font-size: 15px;
+    font-weight: bold;
+    height: 0;
+    margin-bottom: -5px;
+    margin-top: 3px;
+}
+#htmlPreview {
+    border: 1px solid #DBDBDB;
+    height: 389px;
+    margin-left: 23px;
+    margin-top: 22px;
+    width: 537px;
+    border-radius: 5px 5px 5px 5px;
+}
+#html {
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #DBDBDB;
+}
+#selectDiv table td, #paramsDiv table td,#dbDetailDiv table td,#procedureDiv table td {
+    border: medium none !important;
+    padding: 10px;
+    font-weight: bold;
+}
+#template-params-tb  td {
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 19px;
+    border: 1px solid #DBDBDB !important;
+     border-radius: 5px 5px 5px 5px !important;
+}
+#procedureDiv {
+    margin-left: -196px;
+}
+#dbDetailDiv {
+   margin-left: -10px;
+}
+#template-params {
+    padding: 19px 19px 0 19px;
+}
+#btnDiv {
+    margin-left: 37em;
+    padding: 15px 0px 7px 0px;
+}
+#output-params-div {
+    text-align: -moz-center;
+}
+
+#template-outparams-tb td {
+    border: 1px solid #DBDBDB !important;
+    border-radius: 5px 5px 5px 5px !important;
+    padding: 19px;
+}
+#template-params a,#headingDiv a {
+    font-style: italic;
+    font-weight: bold;
+}
+#title-td {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 10px !important;
+    padding-top:  10px !important;
+    text-align: center;
+}
+#headingDiv table tr td {
+    border: none !important;
+}
+#btn-td-div {
+    margin-left: 9em;
+}
+#showURLParentId {
+    color: threedshadow;
+    margin-top: 19px;
+}
+#main-table-id td {
+    padding-right: 15px;
+}
+#createatoredProcedureId {
+    margin-left: 18em;
+}
+#sqlErrDiv {
+    padding: 19px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.downloadLink {
+    background: url("../images/sprite.png") no-repeat scroll 0 -802px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 17px;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    width: 50px;
+}
