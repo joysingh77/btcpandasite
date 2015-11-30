@@ -1,0 +1,102 @@
+/**/
+/* font */
+/**/
+
+/**/
+/* defaults */
+/**/
+.sky-form {
+	margin: 0;
+	outline: none;
+
+	font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #666;
+}
+
+
+
+}
+.sky-form .input,
+.sky-form .select,
+.sky-form .textarea,
+.sky-form .radio,
+.sky-form .checkbox,
+.sky-form .toggle,
+.sky-form .button {
+	position: relative;
+	display: block;
+}
+.sky-form .input input,
+.sky-form .select select,
+.sky-form .textarea textarea {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	height: 39px;
+	padding: 6px 10px;
+	outline: none;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 0;
+	background: #fff;
+	font: 15px/23px 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #404040;
+	appearance: normal;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+.sky-form .progress {
+	float: right;
+	margin-top: 10px;
+	line-height: 39px;
+	color: #232323;
+}
+.sky-form button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+
+/**/
+/* captcha inputs */
+/**/
+.sky-form .input-captcha img {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	border-left: 1px solid #e5e5e5;
+}
+
+
+/**/
+/* file inputs */
+/**/
+.sky-form .input-file .button {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	float: none;
+	height: 31px;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 13px;
+	line-height: 31px;
+}
+.sky-form .input-file .button:hover {
+	box-shadow: none;
+}
+.sky-form .input-file .button input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	font-size: 30px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+
+/**/
+/* selects */
+/**/
