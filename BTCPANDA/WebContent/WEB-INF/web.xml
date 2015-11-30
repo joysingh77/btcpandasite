@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>BTCPANDA</display-name>
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>halfinitservlet</servlet-name>
+    <servlet-class>com.halos.half.core.servlet.HalfInitServlet</servlet-class>
+    <init-param>
+      <param-name>applicationproperties</param-name>
+      <param-value>HalosTech.props</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
+  <servlet>
+    <servlet-name>FileUploadDemoServlet</servlet-name>
+    <servlet-class>com.storedprocedure.FileUploadDemoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileUploadDemoServlet</servlet-name>
+    <url-pattern>/uploadservlet</url-pattern>
+  </servlet-mapping>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Calling Cards Resources</web-resource-name>
+      <url-pattern>/hReport/*</url-pattern>
+       <url-pattern>/guest/*</url-pattern>
+      <url-pattern>/PAdmin/*</url-pattern>
+      <url-pattern>/halosReport/*</url-pattern>
+      <http-method>DELETE</http-method>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+      <http-method>PUT</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>operator</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <realm-name>half</realm-name>
+    <form-login-config>
+      <form-login-page>/jsp/common/login.jsp</form-login-page>
+      <form-error-page>/jsp/common/login.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
+  <security-role>
+    <description>A user allowed to invoke echo methods</description>
+    <role-name>operator</role-name>
+  </security-role>
+  <resource-ref>
+    <description>Application DataSource Reference</description>
+    <res-ref-name>jdbc/HallosF</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+</web-app>
