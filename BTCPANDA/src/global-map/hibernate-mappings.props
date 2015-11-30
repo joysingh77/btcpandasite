@@ -1,0 +1,10 @@
+
+Half3Uploader=com/halos/half/components/uploader/hbm/
+i18n=com/halos/half/i18n/hbm/
+security=com/halos/half/security/hbm/
+contact=com/halos/half/contact/hbm/
+
+gateways = com/halos/gateways/hbm/
+reportengine= com/halos/reportengine/hbm/
+HalosDMS=com/halos/htechdms/halosdms/Hdms/datamanagement/hbm/
+permissions = com/halos/htechsecurity/halossecurity/security/permissions/hbm/

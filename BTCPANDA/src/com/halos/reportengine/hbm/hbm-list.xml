@@ -1,0 +1,6 @@
+<hbm>
+
+
+ <file name="com/halos/reportengine/hbm/ReportingUrlCreation.hbm.xml" />
+ <file name="com/halos/reportengine/hbm/TemplateMapping.hbm.xml" />
+</hbm>

@@ -1,0 +1,11 @@
+appid = reportEngine
+webTablePageSize = 10
+logfile = D:/halos_dynamic_report_log.log
+
+
+
+organizationId = 1
+
+
+tempDmsDocFolder = D:/TempDMSFiles
+fairDmsDocFolder = D:/FairDMSFiles

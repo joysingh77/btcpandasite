@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated on Tue Aug 06 05:23:25 IST 2013 by AJIN C using AutoCodings -->
+<hibernate-mapping>
+    <class name="com.halos.reportengine.entity.TemplateMapping" table="halos_templatemapping">
+        <id name="templateMappingId" column="templateMappingId">
+                  <generator class="increment"/>
+      	</id>
+        <property name="urlId" type="long"/>
+        <property name="inputTemplateId" type="long"/>
+        <property name="outputTemplateId" type="long"/>
+        <property name="organizationId" type="long"/>
+        <property name="status" type="string"/>
+        <property name="createdOn" type="timestamp"/>
+        <property name="createdBy" type="long"/>
+        <property name="modifiedOn" type="timestamp"/>
+        <property name="modifiedBy" type="long"/>
+    </class>
+</hibernate-mapping>

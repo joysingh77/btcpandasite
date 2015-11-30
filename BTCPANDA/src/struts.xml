@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<bean type="org.apache.struts2.dispatcher.mapper.ActionMapper"
+		name="mymap" class="com.mapper.MyActionMapper" />
+	<constant name="struts.mapper.class" value="composite" />
+	<constant name="struts.mapper.composite" value="mymap,rest" />
+	<constant name="struts.action.extension" value="xhtml,,xml,json,action" />
+
+	<package name="HalosReportEngine" namespace="/halosReport"
+		extends="half-default">
+
+
+
+
+		<action name="createOutputTemplate"
+			class="com.halos.reportengine.action.CreateOutputTemplate">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+
+
+		<action name="createInputTemplate"
+			class="com.halos.reportengine.action.CreateInputTemplate">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+
+		<action name="uploadTemplate"
+			class="com.halos.reportengine.action.UploadTemplateAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+
+
+
+		<action name="home" class="com.halos.reportengine.action.Success">
+			<result>/reportengine/homepage.jsp</result>
+		</action>
+		<action name="loadJspPage" class="com.halos.reportengine.LoadPages">
+			<result name="1">/reportengine/reportingurlcreation/displayreportingurlcreation.jsp</result>
+			<result name="2">/reportengine/inputtemplatecreation.jsp</result>
+			<result name="3">/reportengine/outputtemplatecreation.jsp</result>
+			<result name="4">/reportengine/storedprocedurecreation.jsp</result>
+			<result name="5">/reportengine/reportingpage.jsp</result>
+		</action>
+		<action name="inputTemplate" class="com.halos.reportengine.action.Success">
+			<result>/reportengine/inputtemplatecreation.jsp</result>
+		</action>
+		<action name="outputTemplate" class="com.halos.reportengine.action.Success">
+			<result>/reportengine/outputtemplatecreation.jsp</result>
+		</action>
+		<!-- Reporting Url Creation -->
+		<action name="ReportingUrlCreationPage" class="com.halos.reportengine.action.Success">
+			<result>/reportengine/reportingurlcreation/displayreportingurlcreation.jsp</result>
+		</action>
+		<action name="saveReportingUrlCreationInfo"
+			class="com.halos.reportengine.action.reportingurlcreation.SaveReportingUrlCreationAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+		<action name="editReportingUrlCreationInfo"
+			class="com.halos.reportengine.action.reportingurlcreation.EditReportingUrlCreationAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+		<action name="loadReportingUrlCreationInfo"
+			class="com.halos.reportengine.action.reportingurlcreation.LoadReportingUrlCreationAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+		<action name="deleteReportingUrlCreationInfo"
+			class="com.halos.reportengine.action.reportingurlcreation.DeleteReportingUrlCreationAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+
+		<action name="viewInputTemplate" class="com.halos.reportengine.action.ViewInputTemplate">
+			<result>/reportengine/inputtemplate.jsp</result>
+		</action>
+
+		<action name="downloadInputtemplate"
+			class="com.halos.reportengine.action.DownloadInputtemplate">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="contentDisposition">attachment;filename=%{filename}</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+
+
+		<action name="loadReportEngineSelectBoxes"
+			class="com.halos.reportengine.action.LoadReportEngineSelectBoxesAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+
+		<action name="loadDependentReportEngineSelectBoxes"
+			class="com.halos.reportengine.action.LoadDependentReportEngineSelectBoxesAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+
+		<action name="GenerateReport"
+			class="com.halos.reportengine.action.GenerateReportAction">
+			<result>/reportengine/outputwriter.jsp</result>
+		</action>
+
+		<action name="loadAllReports"
+			class="com.halos.reportengine.action.LoadAllReportsAction">
+			<result>/reportengine/allreports.jsp</result>
+		</action>
+		<action name="loadProceduresPage"
+			class="com.halos.reportengine.action.LoadAllProcedursAction">
+			<result>/reportengine/allprocedures.jsp</result>
+		</action>
+		<action name="createStoredProcedure"
+			class="com.halos.reportengine.action.CreateStoredProcedureAction">
+			<result type="json">
+				<param name="excludeNullProperties">true</param>
+			</result>
+		</action>
+	</package>
+	<include file="reporturl.xml"></include>
+    <include file="guest.xml"></include>
+</struts>
+    	

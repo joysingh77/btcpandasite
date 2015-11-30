@@ -1,0 +1,8 @@
+Half3Uploader=com/halos/half/components/uploader/context/
+Halfi18n=com/halos/half/i18n/context/
+HalfSecurity=com/halos/half/security/context/
+Half3hPGTest=com/halos/half/contact/context/
+
+reportengine= com/halos/reportengine/context/
+HalosDMS=com/halos/htechdms/halosdms/Hdms/datamanagement/context/
+permissions = com/halos/htechsecurity/halossecurity/security/permissions/context/

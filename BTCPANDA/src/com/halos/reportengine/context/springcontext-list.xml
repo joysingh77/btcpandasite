@@ -1,0 +1,4 @@
+<context>
+	  <file name="com/halos/reportengine/context/dao-context.xml" />
+	  <file name="com/halos/reportengine/context/api-context.xml" />
+</context>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated on Wed Apr 17 11:58:35 IST 2013 by AJIMON C using AutoCodings -->
+<hibernate-mapping>
+    <class name="com.halos.reportengine.entity.ReportingUrlCreation" table="halos_hre_reportingurlcreation">
+        <id name="reportingUrlCreationId" column="reportingUrlCreationId">
+                  <generator class="increment"/>
+      	</id>
+      	<property name="name" type="string"/>
+        <property name="reportingUrlName" type="string"/>
+        <property name="status" type="string"/>
+        <property name="createdOn" type="timestamp"/>
+        <property name="createdBy" type="long"/>
+        <property name="modifiedOn" type="timestamp"/>
+        <property name="modifiedBy" type="long"/>
+    </class>
+</hibernate-mapping>
